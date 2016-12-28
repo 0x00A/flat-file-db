@@ -7,7 +7,7 @@ const suite = new Benchmark.Suite()
 suite.on('cycle', event => console.log(String(event.target)))
 const add = (name, fn) => suite.add(name, fn, { defer: true })
 
-const a = level('./tmp/mydb')
+const a = level('/tmp/mydb')
 const b = flatfile('/tmp/my.db')
 
 add('level-put', complete => {
